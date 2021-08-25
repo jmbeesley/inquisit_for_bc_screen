@@ -1,4 +1,4 @@
-# inquisit_bc_screen_prototype
+# INQUISIT GWAS target gene prioritisation
 
 ## Background
 

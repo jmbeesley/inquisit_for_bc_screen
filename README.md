@@ -33,7 +33,9 @@ INQUISIT is a composite method which hypothesises that trait-associated SNPs imp
 
 This code simply copies the pre-processed annotation data, performs intersections between input variants and these annotations, then computes scores for each category of potential SNP effects (coding, promoter, distal). A bed file containing BCAC candidate casual variants from the fine-mapping analysis (Fachal et al., 2019) is provided in the reference directory.
 
+```
 bash code/inquisit.sh <run_name> <snp_list>
+```
 
 ## Interpreting results
 

@@ -43,7 +43,7 @@ Genes prioritised in each of the mechanistic categories are ranked by these scor
 
 ## References
 
-[Michailidou et al., Nature, 2017](https://www.nature.com/articles/nature24284)
-[Fachal et al., Nature Genetics 2020](https://www.nature.com/articles/s41588-019-0537-1)
-[Beesley et al., Genome Biol 2020](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1877-y)
-[Rao et al., Cell 2014](https://www.cell.com/fulltext/S0092-8674(14)01497-4)
+[Michailidou et al., Association analysis identifies 65 new breast cancer risk loci. Nature, 2017](https://www.nature.com/articles/nature24284)  
+[Fachal et al., Fine-mapping of 150 breast cancer risk regions identifies 191 likely target genes. Nature Genetics 2020](https://www.nature.com/articles/s41588-019-0537-1)  
+[Beesley et al., Chromatin interactome mapping at 139 independent breast cancer risk signals. Genome Biol 2020](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1877-y)  
+[Rao et al., A 3D Map of the Human Genome at Kilobase Resolution Reveals Principles of Chromatin Looping. Cell 2014](https://www.cell.com/fulltext/S0092-8674(14)01497-4)  

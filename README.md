@@ -4,15 +4,15 @@
 
 Candidate breast cancer risk genes included in the CRISPR screens in Tuano et al., were selected primarily using the INQUISIT heuristic.
 
-**INQUISIT** (*Integrated eQTL and In Silico Prediction of GWAS Targets*) was originally developed to prioritise candidate target genes underlying breast cancer risk signals detected by GWAS. This was presented in Michailidou et al., Nature, 2017 and subsequently in an updated version to prioritise candidate target genes at fine-mapped breast cancer risk loci (Fachal et al., Nature Genetics, 2019). This (now out-of-date) version is presented in this workflow. 
+**INQUISIT** (*Integrated eQTL and In Silico Prediction of GWAS Targets*) was originally developed to prioritise candidate target genes underlying breast cancer risk signals detected by GWAS. This was presented in Michailidou et al., Nature, 2017 and subsequently in an updated version to prioritise candidate target genes at fine-mapped breast cancer risk loci (Fachal et al., Nature Genetics, 2019). The latter (now out-of-date) version is presented in this workflow. 
 
-INQUISIT is a composite method which considers SNPs impact effector genes by affecting coding potential (protein sequence or through splicing), through modulaing the promoter, or through distal gene regulation. The method combines evidence from a range of functional genomics assays and computational approaches that variously aim to link regulatory elements such as enhancers with target genes. The hypothesis is that candidate variants within a GWAS locus (e.g. correlated with the index SNP) will predominantly act through one or more of these categories on one or more target genes.
+INQUISIT is a composite method which hypothesises that trait-associated SNPs impact effector genes by affecting coding potential (protein sequence or through splicing), through modulaing the promoter, or through distal gene regulation. The method combines evidence from a range of functional genomics assays and computational approaches that variously aim to link regulatory elements such as promoters and enhancers with target genes. The hypothesis is that candidate variants within a GWAS locus (e.g. correlated with the index SNP) will predominantly act through one or more of these categories on one or more target genes.
 
 ## Data
 
   - **Gene annotations**: GENCODE v19 basic
   - **Promoter regions** - GENCODE v19 basic transcription start sites, upstream 1kb, and downstream 100bp.
-  - **Coding variants** - Fine-mapped breast cancer risk variants pre-processed with VEP, alamut, 
+  - **Coding variants** - Fine-mapped breast cancer risk variants pre-processed with VEP and alamut, 
   - **Allele-specific expression** - [obsolete] Allelic-imbalance analysis, probably erroneous
   - **Enriched biofetures** - Epigenomic annotations enriched with BCAC FM CCVs
   - **eQTL** - eQTLs from breast cancer studies (METABRIC, TCGA, NHS), filtered for study wide P < 1e-4, then for p value ratio with best CCV < 100.
@@ -37,6 +37,6 @@ bash code/inquisit.sh <run_name> <snp_list>
 
 ## Interpreting results
 
-Genes prioritised in each of the mechanistic categories are ranked by these score, where the score reflects the degree of spporting evidence from all the candidate causal SNPs in the signal. Scores are converted to levels (1-3), where level 1 genes have the most evidence of potentially functional SNPs acting upon them. Level 2 genes shoould be viewed as possibile targets, but demand less focus. Level 3 are very unlikely targets.
+Genes prioritised in each of the mechanistic categories are ranked by these score, where the score reflects the degree of spporting evidence from all the candidate causal SNPs in the signal. Scores are converted to levels (1-3), where level 1 genes are supported by the strongest evidence, and generally from multiple sources or methods. Level 2 genes shoould be viewed as possibile targets, but demand less focus. Level 3 are very unlikely targets.
 
 

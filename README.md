@@ -2,11 +2,11 @@
 
 ## Background
 
-Candidate breast cancer risk genes analysed in the CRISPR screens in XXXX were selected primarily using the INQUISIT heuristic.
+Candidate breast cancer risk genes included in the CRISPR screens in Tuano et al., were selected primarily using the INQUISIT heuristic.
 
-**INQUISIT** (*Integrated eQTL and In Silico Prediction of GWAS Targets*) was originally developed to prioritise candidate target genes underlying breast cancer risk signals detected by GWAS. This was presented in Michailidou et al., Nature, 2017 and subsequently in an updated version to prioritise candidate target genes at fine-mapped breast cancer risk loci (Fachal et al., Nature Genetics, 2019). This (now out-of-date) is the version presented in this workflow. 
+**INQUISIT** (*Integrated eQTL and In Silico Prediction of GWAS Targets*) was originally developed to prioritise candidate target genes underlying breast cancer risk signals detected by GWAS. This was presented in Michailidou et al., Nature, 2017 and subsequently in an updated version to prioritise candidate target genes at fine-mapped breast cancer risk loci (Fachal et al., Nature Genetics, 2019). This (now out-of-date) version is presented in this workflow. 
 
-It is a composite method which considers SNPs act on effector genes by affecting a gene's coding potential (protein sequence or through splicing), via modulaing the promoter, or through distal gene regulation. The method combines evidence from a range of experimental functional genomics assays and computational approach that variously aim to link regulatory elements such as enhancers with target genes. The hypothesis is that candidate variants within a GWAS locus (e.g. correlated with the index SNP) will predominantly act through one or more of these categories on one or more target genes.
+INQUISIT is a composite method which considers SNPs impact effector genes by affecting coding potential (protein sequence or through splicing), through modulaing the promoter, or through distal gene regulation. The method combines evidence from a range of functional genomics assays and computational approaches that variously aim to link regulatory elements such as enhancers with target genes. The hypothesis is that candidate variants within a GWAS locus (e.g. correlated with the index SNP) will predominantly act through one or more of these categories on one or more target genes.
 
 ## Data
 
@@ -25,7 +25,7 @@ It is a composite method which considers SNPs act on effector genes by affecting
           - ENCODE (ChIA-PET), 
           - Beesley et al., Genome Biol 2019 (Capture Hi-C), 
           - Rao et al., Cell 2013 (HiC); 
-      - Computation correlative methods using epigenomic data from breast cells: 
+      - Computational correlative methods using epigenomic data from breast cells: 
           - PreSTIGE, Hnisz, FANTOM5, IM-PET
   - **Breast cancer driver genes** - 
 
@@ -33,7 +33,7 @@ It is a composite method which considers SNPs act on effector genes by affecting
 
 This code simply copies the pre-porcessed annotation data, performs intersections between input variants and these annoations, then computes scores for each category of potential SNP effect (coding, promoter, distal).
 
-bash inquisit.sh <run_name> snp_list.bed
+bash code/inquisit.sh <run_name> <snp_list>
 
 ## Interpreting results
 

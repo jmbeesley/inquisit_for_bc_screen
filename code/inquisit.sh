@@ -6,7 +6,7 @@
 RUN="$1"
 SNPs="$2"
 INQDIR_RUN=output/${RUN}
-DATADIR=data/breast_annotations/
+DATADIR=reference/breast_annotations/
 TEMPDIR=${INQDIR_RUN}/temp
 
 # HPC modules

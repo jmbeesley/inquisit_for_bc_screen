@@ -4,7 +4,7 @@
 
 Candidate breast cancer risk genes included in the CRISPR screens in Tuano et al., were selected primarily using the INQUISIT heuristic.
 
-**INQUISIT** (*Integrated eQTL and In Silico Prediction of GWAS Targets*) was originally developed to prioritise candidate target genes underlying breast cancer risk signals detected by GWAS. This was presented in Michailidou et al., Nature, 2017 and subsequently in an updated version to prioritise candidate target genes at fine-mapped breast cancer risk loci (Fachal et al., Nature Genetics, 2019). The latter (now out-of-date) version is presented in this workflow. 
+**INQUISIT** (*Integrated eQTL and In Silico Prediction of GWAS Targets*) was originally developed to prioritise candidate target genes underlying breast cancer risk signals detected by GWAS. This was presented in Michailidou et al., Nature, 2017 and subsequently in an updated version to prioritise candidate target genes at fine-mapped breast cancer risk loci (Fachal et al., Nature Genetics, 2020). The latter (now out-of-date) version is presented in this workflow. 
 
 INQUISIT is a composite method which hypothesises that trait-associated SNPs impact effector genes by affecting coding potential (protein sequence or through splicing), through modulaing the promoter, or through distal gene regulation. The method combines evidence from a range of functional genomics assays and computational approaches that variously aim to link regulatory elements such as promoters and enhancers with target genes. The hypothesis is that candidate variants within a GWAS locus (e.g. correlated with the index SNP) will predominantly act through one or more of these categories on one or more target genes.
 
@@ -23,8 +23,8 @@ INQUISIT is a composite method which hypothesises that trait-associated SNPs imp
   - **Target gene links**: 
       - Experimental chromatin interaction data from breast samples: 
           - ENCODE (ChIA-PET), 
-          - Beesley et al., Genome Biol 2019 (Capture Hi-C), 
-          - Rao et al., Cell 2013 (HiC); 
+          - Beesley et al., Genome Biol 2020 (Capture Hi-C), 
+          - Rao et al., Cell 2014 (HiC); 
       - Computational correlative methods using epigenomic data from breast cells: 
           - PreSTIGE, Hnisz, FANTOM5, IM-PET
   - **Breast cancer driver genes** - 
@@ -39,6 +39,11 @@ bash code/inquisit.sh <run_name> <snp_list>
 
 ## Interpreting results
 
-Genes prioritised in each of the mechanistic categories are ranked by these score, where the score reflects the degree of spporting evidence from all the candidate causal SNPs in the signal. Scores are converted to levels (1-3), where level 1 genes are supported by the strongest evidence, and generally from multiple sources or methods. Level 2 genes shoould be viewed as possibile targets, but demand less focus. Level 3 are very unlikely targets.
+Genes prioritised in each of the mechanistic categories are ranked by these scores which reflect the degree of supporting evidence from all the candidate causal variants contained within the association signal. Because the score ranges differ between categories, scores are converted to levels (1-3), where level 1 genes are supported by the strongest evidence, generally from multiple sources or methods. Level 2 genes should be viewed as possibile targets, but demand less focus. Level 3 are very unlikely to be true targets.
 
+## References
 
+[Michailidou et al., Nature, 2017](https://www.nature.com/articles/nature24284)
+[Fachal et al., Nature Genetics 2020](https://www.nature.com/articles/s41588-019-0537-1)
+[Beesley et al., Genome Biol 2020](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1877-y)
+[Rao et al., Cell 2014](https://www.cell.com/fulltext/S0092-8674(14)01497-4)

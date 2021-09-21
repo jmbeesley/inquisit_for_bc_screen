@@ -8,14 +8,14 @@ echo
 echo "...in enriched biofeatures..."
 
 # general
-TSS=data/breast_annotations/gene_annotations/gencode.v19.basic.tss.1.1kb.bed.gz
+TSS=reference/breast_annotations/gene_annotations/gencode.v19.basic.tss.1.1kb.bed.gz
 VARIANTS=${SNPs}
 
 # intersect enriched feature annotations
 for j in ${DATADIR}/enriched_features/annotation_files/*.bed.gz ; do
 
     ANNOTATION=$( basename ${j} )
-   
+
     bedtools intersect -a ${VARIANTS} -b ${j} -loj |
     awk -F'\t' -v A=${ANNOTATION} '$10 != "." { print $0"\t"A }'
 
@@ -70,7 +70,7 @@ for j in ${DATADIR}/TAD/*.bed ; do
     bedtools intersect -a ${VARIANTS} -b ${j} -wa -wb > ${TEMPDIR}/variant_tad_intersect.tmp
     bedtools intersect -a ${TSS} -b ${j} -wa -wb > ${TEMPDIR}/tss_tad_intersect.tmp
 
-done 
+done
 
 # add header
 echo -e "varChr\tvarStart\tvarEnd\tvariant\tsnp_icogs\trsID\tregion\tsignal\tphenotype\ttChr\ttStart\ttEnd\ttad" |
